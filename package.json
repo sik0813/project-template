@@ -1,0 +1,19 @@
+{
+  "name": "project-template",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "preinstall": "node ./tools/preinstall.js",
+    "start": "pnpm --parallel --stream -r start",
+    "build": "pnpm --parallel --stream -r build",
+    "start:frontend": "pnpm --parallel --filter \"./frontend/**\" start",
+    "start:backend": "pnpm --filter ./backend start",
+    "preview:remote-main": "pnpm --filter remote-main preview",
+    "build:remote-main": "pnpm --filter remote-main build",
+    "preview": "pnpm --stream -r run start:dev"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8"
+  }
+}
